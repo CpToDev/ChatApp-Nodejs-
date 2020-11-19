@@ -1,0 +1,10 @@
+Interesting thing about the chat app
+
+
+jsut to communicate with the client side we can use callback function from the server side which will carry error obj from server to client .So in case of joining a new user to the join room if there is any error we will send a
+call back fucntion to the client side client side will give us a flash message that it is an error u cant join  
+
+
+if we want to change the webpage on the client side we can simply use 
+
+location.href="/" to go to home page

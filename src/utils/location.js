@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '/' });
 const fetch = require('node-fetch');
 
 const getLocation = (location) => {
@@ -5,7 +6,7 @@ const getLocation = (location) => {
 	const longitude = location.longitude;
 	return new Promise((resolve, reject) => {
 		fetch(
-			`http://api.positionstack.com/v1/reverse?access_key=f63bd22e618bbf7f783f1c61b11468e4&query=${latitude},${longitude}&limit=1`
+			`http://api.positionstack.com/v1/reverse?access_key=${process.env.API_KEY}&query=${latitude},${longitude}&limit=1`
 		)
 			.then((response) => response.json())
 			.then((data) => {
